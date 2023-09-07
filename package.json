@@ -1,0 +1,30 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "node .output/server/index.mjs",
+    "build": "nuxt build --dotenv .env.production",
+    "dev": "nuxt dev --dotenv .env.local",
+    "generate": "nuxt generate --dotenv .env.production",
+    "preview": "nuxt preview --dotenv .env.production",
+    "lint:js": "eslint src --ext .ts,.vue --fix"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "^0.8.2",
+    "@nuxtjs/eslint-config-typescript": "^12.1.0",
+    "@nuxtjs/eslint-module": "^4.1.0",
+    "@nuxtjs/i18n": "8.0.0-rc.3",
+    "@nuxtjs/robots": "^3.0.0",
+    "@nuxtjs/tailwindcss": "6.8.0",
+    "@vite-pwa/nuxt": "^0.1.0",
+    "eslint": "8.48.0",
+    "nuxt": "^3.7.0",
+    "nuxt-security": "^0.14.4",
+    "nuxt-simple-sitemap": "3.2.6",
+    "postcss-custom-properties": "13.3.0",
+    "typescript": "5.2.2"
+  },
+  "dependencies": {
+    "sass": "1.66.1",
+    "vue-recaptcha": "2.0.3"
+  }
+}

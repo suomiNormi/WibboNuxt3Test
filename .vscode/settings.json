@@ -1,0 +1,14 @@
+{
+    "git.ignoreLimitWarning": true,
+    "css.lint.unknownAtRules": "ignore",
+    "css.validate": false,
+    "scss.validate": false,
+    "css.customData": [".vscode/css_custom_data.json"],
+    "scss.lint.unknownAtRules": "ignore",
+    "less.lint.unknownAtRules": "ignore",
+    "files.exclude": {
+        "**/node_modules": false
+    },
+    "prettier.tabWidth": 4,
+    "vue.codeActions.enabled": false
+}

@@ -1,0 +1,9 @@
+:root {
+    $default-color: #18202b;
+
+    --app-background-color: #{rgba($default-color, .6)};
+    --primary-color: #{$default-color};
+    --primary-color-hover: #{lighten($default-color, 10%)};
+    --light-color: #{lighten($default-color, 15%)};
+    --dark-color: #{darken($default-color, 0%)};
+}

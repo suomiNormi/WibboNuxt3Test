@@ -1,0 +1,9 @@
+@import "./base/root";
+@import "./base/animations";
+@import './base/utilitaire';
+
+$fa-font-path: "~/assets/webfonts";
+
+@import './fontawesome/fontawesome';
+@import './fontawesome/brands';
+@import './fontawesome/solid';
