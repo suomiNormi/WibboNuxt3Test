@@ -23,8 +23,8 @@
                   <span class="absolute inline-flex w-full h-full bg-gray-600 rounded-full" />
                 </div>
                 <div
-                  class="absolute bottom-0 right-0 w-4 h-4 bg-red-700 rounded-full shadow-inner[-2px_-2px_rgba(0,0,0,0.3)] z-10"
-                  :class="staff.online == 1 ? 'bg-green-700' : ''"
+                  class="absolute bottom-0 right-0 w-4 h-4 rounded-full shadow-inner[-2px_-2px_rgba(0,0,0,0.3)] z-10"
+                  :class="staff.online === 1 ? 'bg-green-700' : 'bg-red-700'"
                 />
               </div>
               <div class="text-sm text-center text-gray-200 break-words">

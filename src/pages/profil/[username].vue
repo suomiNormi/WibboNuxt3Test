@@ -9,7 +9,7 @@
           <div class="profil">
             <div class="rounded profil__avatar-frame">
               <BaseAvatar :figure="user.look" gesture="sml" :direction="2" :head_direction="3" size="l" />
-              <div class="profil__statut" :class="{ 'profil__statut--online': user.online === true }" />
+              <div class="profil__statut" :class="{ 'profil__statut--online': user.online === 1 }" />
             </div>
 
             <div class="flex flex-col">
@@ -160,7 +160,7 @@ import * as filters from '~/utils/filters'
 
 const route = useRoute()
 
-const user = ref<Partial<User>>({ id: 0, username: '', look: '', motto: '', online: false, vip_points: 0, account_created: 0, last_offline: 0 })
+const user = ref<Partial<User>>({ id: 0, username: '', look: '', motto: '', online: 0, vip_points: 0, account_created: 0, last_offline: 0 })
 const stats = ref<UserStats>({ respect: 0, achievement_score: 0, online_time: 0 })
 const groupe = ref<Group[]>([])
 const badgecount = ref(0)
