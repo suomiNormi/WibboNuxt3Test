@@ -22,7 +22,7 @@
 
             <div class="col-span-1">
               <label for="contactInputsujet" class="form-label">Ton sujet</label>
-              <BaseSelect id="contactInputsujet" v-model="contactForm.sujet" name="sujet" aria-describedby="sujetHelp" :options="sujetList" />
+              <BaseSelect id="contactInputsujet" v-model="selectedSujetId" name="sujet" aria-describedby="sujetHelp" :options="sujetList" />
               <small
                 id="sujetHelp"
                 class="form-text"
@@ -72,6 +72,7 @@ const { showAlert } = useNotification()
 
 const loading = ref(false)
 const contactForm = ref({ username: '', email: '', sujet: '', message: '', recaptchaToken: '' })
+const selectedSujetId = ref(0)
 const sujetList = ref([
   'Je souhaite commander / upload un badge',
   "J'ai un problème avec l'achat des LTC/WibboPoints",
@@ -87,20 +88,13 @@ const sujetList = ref([
   'Autre'
 ])
 
-onMounted(() => (contactForm.value.sujet = sujetList.value[0]))
-
 const contactPost = async () => {
   if (loading.value) { return }
 
   try {
     loading.value = true
 
-    if (!contactForm.value.username) { throw new Error('mail.invalid') }
-    if (!contactForm.value.email) { throw new Error('mail.invalid') }
-    if (!contactForm.value.sujet) { throw new Error('mail.invalid') }
-    if (!contactForm.value.message) { throw new Error('mail.invalid') }
-
-    contactForm.value.recaptchaToken = ''
+    contactForm.value.sujet = sujetList.value.at(selectedSujetId.value) || ''
 
     await useApiFetch('/api/v1/contact', { body: contactForm.value, method: 'POST' })
 
@@ -109,25 +103,8 @@ const contactPost = async () => {
       type: 'success'
     })
 
-    contactForm.value = { username: '', email: '', sujet: sujetList.value[0], message: '', recaptchaToken: '' }
-  } catch (e: unknown) {
-    if (e instanceof Error) {
-      let text = e.message
-      let params: string[] = []
-
-      if (e.message.includes('|')) {
-        text = e.message.split('|')[0]
-        params = e.message.split('|').slice(1)
-      }
-
-      showAlert({
-        translate: true,
-        message: `alert-warning.${text}`,
-        type: 'warning',
-        params
-      })
-    }
-  }
+    contactForm.value = { username: '', email: '', sujetId: 0, message: '', recaptchaToken: '' }
+  } catch (e: unknown) { }
 
   loading.value = false
 }
