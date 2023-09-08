@@ -111,7 +111,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { ICategory, IMessage, ISujet } from '~/types'
+import type { ICategory, IMessage, Sujet } from '~/types'
 import * as filters from '~/utils/filters'
 
 definePageMeta({
@@ -124,7 +124,7 @@ const route = useRoute()
 const authUser = useAuthUser()
 const { showAlert } = useNotification()
 
-const sujet = ref<ISujet | null>(null)
+const sujet = ref<Sujet | null>(null)
 const userMessage = ref<IMessage[]>([])
 const totalPage = ref(1)
 
@@ -148,7 +148,7 @@ const navCategory = ref<ICategory[]>([
 const refresh = async () => {
   try {
     const page = route.query.page ? '?page=' + route.query.page : ''
-    const data = await useApiFetch<{ totalPage: number; sujet: ISujet; userMessage: IMessage[] }>('/api/v1/forum/sujet/' + route.params.id + page)
+    const data = await useApiFetch<{ totalPage: number; sujet: Sujet; userMessage: IMessage[] }>('/api/v1/forum/sujet/' + route.params.id + page)
 
     totalPage.value = data.totalPage
     sujet.value = data.sujet

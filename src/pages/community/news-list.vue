@@ -21,7 +21,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { New } from '~/types'
+import type { Article } from '~/types'
 
 definePageMeta({
   title: 'news-list'
@@ -29,12 +29,12 @@ definePageMeta({
 
 const route = useRoute()
 
-const newList = ref<New[]>([])
+const newList = ref<Article[]>([])
 const totalPage = ref(1)
 
 try {
   const page = route.query.page ? '?page=' + route.query.page : ''
-  const data = await useApiFetch<{ listNews: New[]; totalPage: number }>('/api/v1/community/news-list' + page)
+  const data = await useApiFetch<{ listNews: Article[]; totalPage: number }>('/api/v1/community/news-list' + page)
 
   newList.value = data.listNews
   totalPage.value = data.totalPage

@@ -38,7 +38,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { ICheck } from '~/types'
+import type { MailCheck } from '~/types'
 import * as filters from '~/utils/filters'
 
 definePageMeta({
@@ -49,10 +49,10 @@ const authUser = useAuthUser()
 const { showAlert } = useNotification()
 
 const loading = ref(false)
-const check = ref<ICheck>({ type: 0, email: '', temps: 0 })
+const check = ref<MailCheck>({ type: 0, email: '', temps: 0 })
 const emailForm = ref({ mail: '' })
 
-const data = await useApiFetch<{ check: ICheck }>('/api/v1/settings/email')
+const data = await useApiFetch<{ check: MailCheck }>('/api/v1/settings/email')
 
 check.value = data.check
 
@@ -62,7 +62,7 @@ const emailPost = async () => {
   try {
     loading.value = true
 
-    check.value = (await useApiFetch<{ check: ICheck }>('/api/v1/settings/email', { body: emailForm.value, method: 'POST' })).check
+    check.value = (await useApiFetch<{ check: MailCheck }>('/api/v1/settings/email', { body: emailForm.value, method: 'POST' })).check
 
     showAlert({
       message: 'Un mail de confirmation a été envoyé, check ta boite email!',

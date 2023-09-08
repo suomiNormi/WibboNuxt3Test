@@ -27,20 +27,6 @@ export interface User {
     respect?: number
 }
 
-export interface IArticle {
-    id: number
-    topstory_image: string
-    title: string
-    snippet: string
-    link_keyword: string
-}
-
-export interface IUserRankig {
-    username: string
-    look: string
-    [key: string | number]: string | number
-}
-
 export interface NitroLegacy {
     method: string
     params: string[]
@@ -64,11 +50,6 @@ export interface BeforeInstallPromptEvent extends Event {
     prompt(): Promise<void>
 }
 
-export interface UserSearch {
-    username: string
-    look: string
-}
-
 export interface NotificationAlert {
     message: string
     type: string
@@ -87,56 +68,6 @@ export interface Forum {
 }
 
 export interface Article {
-    id: number
-    topstory_image: string
-    title: string
-    snippet: string
-    link_keyword: string
-}
-
-export interface New {
-    id: number
-    link_keyword: string
-    title: string
-}
-
-export interface LastNew {
-    id: number
-    link_keyword: string
-    topstory_image: string
-    title: string
-    snippet: string
-    timestamp: number
-}
-
-export interface Photo {
-    photo: string
-    username: string
-    look: string
-    time: number
-}
-
-export interface IRare {
-    id: number
-    catalog_name: string
-    amount: number
-    rarity_level: number
-}
-
-export interface Staff {
-    id: number
-    rank: number
-    function: string
-    social_insta: string
-    social_discord: string
-    username: string
-    look: string
-    motto: string
-    last_offline: number
-    online: number
-}
-
-export interface IBody {
     author: string
     author_id: number
     body: string
@@ -151,13 +82,36 @@ export interface IBody {
     username: string
 }
 
+export interface Photo {
+    photo: string
+    username: string
+    look: string
+    time: number
+}
+
+export interface Rare {
+    id: number
+    catalog_name: string
+    amount: number
+    rarity_level: number
+}
+
+export interface Staff {
+    id: number
+    rank: number
+    function: string
+    username: string
+    look: string
+    online: number
+}
+
 export interface ICategory {
     id: number
     name: string
     denyCreate?: boolean
 }
 
-export interface IPost {
+export interface Post {
     id: number
     title: string
     statut: number
@@ -170,7 +124,7 @@ export interface IPost {
     type: number
 }
 
-export interface ISujet {
+export interface Sujet {
     id: number
     type: number
     categorie: number
@@ -238,7 +192,7 @@ export interface Room {
     description: string
 }
 
-export interface ICheck {
+export interface MailCheck {
     type: number
     email: string
     temps: number

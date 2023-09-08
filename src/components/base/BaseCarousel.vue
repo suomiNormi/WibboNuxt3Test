@@ -27,10 +27,10 @@
 </template>
 
 <script lang="ts" setup>
-import type { IArticle } from '~/types'
+import type { Article } from '~/types'
 
 const props = defineProps({
-  articles: { type: Array<IArticle>, default: [], required: true }
+  articles: { type: Array<Article>, default: [], required: true }
 })
 
 const selectedId = ref(0)

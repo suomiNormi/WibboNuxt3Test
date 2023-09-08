@@ -48,25 +48,25 @@
 </template>
 
 <script lang="ts" setup>
-import type { IRare } from '~/types'
+import type { Rare } from '~/types'
 import * as filters from '~/utils/filters'
 
 definePageMeta({
   title: 'rares'
 })
 
-const rares = ref<IRare[]>([])
+const rares = ref<Rare[]>([])
 const categorySelected = ref(1)
 
 try {
-  const data = await useApiFetch<{ rares: IRare[] }>('/api/v1/rares')
+  const data = await useApiFetch<{ rares: Rare[] }>('/api/v1/rares')
 
   rares.value = data.rares
 } catch {}
 
-const raresOrder = computed(() => rares.value.filter(x => x.rarity_level === categorySelected.value).sort((a: IRare, b: IRare) => (a.amount > b.amount ? 1 : -1)))
+const raresOrder = computed(() => rares.value.filter(x => x.rarity_level === categorySelected.value).sort((a: Rare, b: Rare) => (a.amount > b.amount ? 1 : -1)))
 
-const priceRare = (rare: IRare) => {
+const priceRare = (rare: Rare) => {
   let price = 0
 
   switch (rare.rarity_level) {

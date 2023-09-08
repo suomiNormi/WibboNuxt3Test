@@ -11,7 +11,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { ICheck } from '~/types'
+import type { MailCheck } from '~/types'
 
 definePageMeta({
   middleware: ['authenticated']
@@ -21,13 +21,13 @@ const authUser = useAuthUser()
 const route = useRoute()
 const { showAlert } = useNotification()
 
-const check = ref<ICheck>({ type: 0, email: '', temps: 0 })
+const check = ref<MailCheck>({ type: 0, email: '', temps: 0 })
 
 onMounted(async () => {
   if (!route.params.code) { return }
 
   try {
-    const data = await useApiFetch<{ check: ICheck }>('/api/v1/settings/email/' + route.params.code, { method: 'PUT' })
+    const data = await useApiFetch<{ check: MailCheck }>('/api/v1/settings/email/' + route.params.code, { method: 'PUT' })
 
     if (data != null && data.check) {
       showAlert({

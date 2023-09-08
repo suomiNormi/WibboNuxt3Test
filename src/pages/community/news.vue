@@ -36,15 +36,15 @@
 </template>
 
 <script lang="ts" setup>
-import type { LastNew } from '~/types'
+import type { Article } from '~/types'
 import * as filters from '~/utils/filters'
 
 const route = useRoute()
 
-const lastNews = ref<LastNew[]>([])
+const lastNews = ref<Article[]>([])
 
 try {
-  const data = await useApiFetch<{ lastNews: LastNew[] }>('/api/v1/community/news-last')
+  const data = await useApiFetch<{ lastNews: Article[] }>('/api/v1/community/news-last')
 
   lastNews.value = data.lastNews
 } catch {}

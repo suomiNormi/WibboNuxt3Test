@@ -27,7 +27,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { IBody } from '~/types'
+import type { Article } from '~/types'
 import * as filters from '~/utils/filters'
 
 const route = useRoute()
@@ -38,10 +38,10 @@ definePageMeta({
   }
 })
 
-const body = ref<IBody | null>(null)
+const body = ref<Article | null>(null)
 
 try {
-  const data = await useApiFetch<{ body: IBody }>('/api/v1/community/news/' + route.params.id)
+  const data = await useApiFetch<{ body: Article }>('/api/v1/community/news/' + route.params.id)
 
   body.value = data.body
 } catch {}

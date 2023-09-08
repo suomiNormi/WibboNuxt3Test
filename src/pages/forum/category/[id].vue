@@ -51,7 +51,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { IPost } from '~/types'
+import type { Post } from '~/types'
 import * as filters from '~/utils/filters'
 
 definePageMeta({
@@ -62,8 +62,8 @@ definePageMeta({
 
 const route = useRoute()
 
-const post = ref<IPost[]>([])
-const postPin = ref<IPost[]>([])
+const post = ref<Post[]>([])
+const postPin = ref<Post[]>([])
 const totalPage = ref(1)
 
 const allPost = computed(() => [...postPin.value, ...post.value])
@@ -72,7 +72,7 @@ const refresh = async () => {
   try {
     const page = route.query.page ? '?page=' + route.query.page : ''
     const search = route.query.search ? 'search=' + route.query.search : ''
-    const data = await useApiFetch<{ post: IPost[]; postPin: IPost[]; totalPage: number }>('/api/v1/forum/category/' + route.params.id + page + (search ? (page ? '&' : '?') + search : ''))
+    const data = await useApiFetch<{ post: Post[]; postPin: Post[]; totalPage: number }>('/api/v1/forum/category/' + route.params.id + page + (search ? (page ? '&' : '?') + search : ''))
 
     post.value = data.post
     postPin.value = data.postPin

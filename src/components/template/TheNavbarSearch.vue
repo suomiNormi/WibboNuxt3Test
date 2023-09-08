@@ -34,7 +34,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { UserSearch } from '~/types'
+import type { User } from '~/types'
 
 const emit = defineEmits(['openSearch'])
 
@@ -43,7 +43,7 @@ const props = defineProps({
 })
 
 const searchForm = ref({ username: '' })
-const searchUsers = ref<UserSearch[]>([])
+const searchUsers = ref<User[]>([])
 const searchInternal = ref(0)
 const loading = ref(false)
 
@@ -77,7 +77,7 @@ watch(
 
     searchInternal.value = window.setTimeout(async () => {
       try {
-        const { users } = await useApiFetch<{ users: UserSearch[] }>('/api/v1/search-user/' + value, { signal: abortController.signal })
+        const { users } = await useApiFetch<{ users: User[] }>('/api/v1/search-user/' + value, { signal: abortController.signal })
         searchUsers.value = users
       } catch (e) {}
       loading.value = false
