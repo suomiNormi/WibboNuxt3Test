@@ -9,6 +9,7 @@ export default defineNuxtConfig({
           assetsUrl: process.env.NUXT_PUBLIC_ASSETS_URL,
           cdnUrl: process.env.NUXT_PUBLIC_CDN_URL,
           nitroUrl: process.env.NUXT_PUBLIC_NITRO_URL,
+          adminUrl: process.env.NUXT_PUBLIC_ADMIN_URL,
           siteMail: process.env.NUXT_PUBLIC_SITE_MAIL,
       },
   },
@@ -128,7 +129,9 @@ export default defineNuxtConfig({
             ],
       },
       workbox: {
-        cleanupOutdatedCaches: true
+        cleanupOutdatedCaches: true,
+        directoryIndex: '/',
+        navigateFallback: null
       },
       client: {
           installPrompt: true,
