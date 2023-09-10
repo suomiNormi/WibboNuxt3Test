@@ -36,7 +36,7 @@
           <NuxtLink :to="'/security/cookie'" target="_self" class="underline hover:underline">
             {{ $t('footer.cookie-link') }}
           </NuxtLink> /
-          <a :href="'mailto:' + runtimeConfig.public.siteMail" target="_self" class="underline hover:underline">{{ runtimeConfig.public.siteMail }}</a>
+          <a :href="'mailto:' + $nuxt.$config.public.siteMail" target="_self" class="underline hover:underline">{{ $nuxt.$config.public.siteMail }}</a>
           <p class="mt-2">
             © 2011 - {{ year }} : Wibbo Hôtel.<br>
             {{ $t('footer.copyright') }}
@@ -48,7 +48,5 @@
 </template>
 
 <script lang="ts" setup>
-const runtimeConfig = useRuntimeConfig()
-
 const year = computed(() => new Date().getFullYear())
 </script>

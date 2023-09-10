@@ -3,7 +3,7 @@
     <iframe
       v-if="SSOTicket != ''"
       id="flash-container"
-      :src="runtimeConfig.public.nitroUrl + '?sso=' + SSOTicket"
+      :src="$nuxt.$config.public.nitroUrl + '?sso=' + SSOTicket"
       width="100%"
       height="100%"
       frameborder="0"
@@ -17,8 +17,6 @@
 import HotelBtn from './HotelBtn.vue'
 
 import type { NitroLegacy } from '~/types'
-
-const runtimeConfig = useRuntimeConfig()
 
 const SSOTicket = ref('')
 

@@ -29,7 +29,7 @@
             </template>
             <template #body>
               <div class="relative w-auto h-48 overflow-hidden bg-gray-800 rounded case">
-                <img :src="'https://cdn.wibbo.org/furni/' + rare.catalog_name + '.png'" class="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+                <img :src="$nuxt.$config.public.cdnUrl + '/furni/' + rare.catalog_name + '.png'" class="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
                 <div class="absolute rarity-icons top-1 left-1" :class="imageCategory(rare.rarity_level)" />
                 <div class="absolute p-2 bg-black rounded bottom-1 right-1 bg-opacity-60">
                   Quantités: {{ rare.amount }}

@@ -14,7 +14,7 @@
 
           <div class="info-group__desc">
             <span>{{ group.desc || 'Aucune description' }}</span>
-            <img :src="'https://cdn.wibbo.org/habbo-imaging/badge/' + group.badge + '.gif'" alt="Wibbo groupe image">
+            <img :src="$nuxt.$config.public.cdnUrl + '/habbo-imaging/badge/' + group.badge + '.gif'" alt="Wibbo groupe image">
           </div>
 
           <div class="info-group__owner">

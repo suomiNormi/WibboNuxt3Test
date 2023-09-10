@@ -144,7 +144,7 @@
           <div class="badge-container">
             <div v-for="group in groupe" :key="group.id" class="badge-socle">
               <NuxtLink :to="'/groupe/' + group.id">
-                <img :src="'https://cdn.wibbo.org/habbo-imaging/badge/' + group.badge + '.gif'" class="badge-img">
+                <img :src="$nuxt.$config.public.cdnUrl + '/habbo-imaging/badge/' + group.badge + '.gif'" class="badge-img">
               </NuxtLink>
             </div>
           </div>

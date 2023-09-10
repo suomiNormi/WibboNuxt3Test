@@ -7,7 +7,7 @@
     </div>
     <div v-for="(data) in photos" :key="data.photo" class="flex items-center justify-center col-span-1">
       <div class="photos" @click="photoSelected = data">
-        <img :src="'https://cdn.wibbo.org/photos/' + data.photo + '.png'" class="photos__background" onerror="style.display='none'">
+        <img :src="$nuxt.$config.public.cdnUrl + '/photos/' + data.photo + '.png'" class="photos__background" onerror="style.display='none'">
         <transition name="opacity">
           <div class="flex items-center photos__about">
             <div>
@@ -26,7 +26,7 @@
       </div>
     </div>
     <BaseModal :show="photoSelected !== null" @close="photoSelected = null">
-      <img v-if="photoSelected" :src="'https://cdn.wibbo.org/photos/' + photoSelected.photo + '.png'" class="photos__background" onerror="style.display='none'">
+      <img v-if="photoSelected" :src="$nuxt.$config.public.cdnUrl + '/photos/' + photoSelected.photo + '.png'" class="photos__background" onerror="style.display='none'">
     </BaseModal>
     <div v-if="loading" class="col-span-1 my-2 text-center">
       <h1><i class="mr-2 fa fa-spinner fa-spin" /> Chargement</h1>
