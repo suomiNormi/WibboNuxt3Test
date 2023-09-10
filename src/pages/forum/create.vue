@@ -40,6 +40,8 @@ definePageMeta({
   title: 'forum-create'
 })
 
+const authUser = useAuthUser()
+
 const loading = ref(false)
 const createForm = ref({ sujet: '', category: '4', message: '' })
 const navCategory = ref([
@@ -51,6 +53,10 @@ const navCategory = ref([
   { id: 6, name: 'Idée & bug' },
   { id: 7, name: 'Jeux' }
 ])
+
+if (authUser.value.rank >= 8) {
+  navCategory.value.push({ id: 8, name: 'Information' })
+}
 
 const navCategoryObject = computed(() =>
   navCategory.value
