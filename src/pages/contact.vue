@@ -103,7 +103,7 @@ const contactPost = async () => {
       type: 'success'
     })
 
-    contactForm.value = { username: '', email: '', sujetId: 0, message: '', recaptchaToken: '' }
+    contactForm.value = { username: '', email: '', sujet: '', message: '', recaptchaToken: '' }
   } catch (e: unknown) { }
 
   loading.value = false
