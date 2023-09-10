@@ -179,7 +179,7 @@
             <div :key="'dropName_' + dropName" class="wibbo-nav__content" :class="dropName == 'avatar' ? 'block' : 'hidden'">
               <ul class="wibbo-nav__ul">
                 <li v-if="authUser.rank > 5" class="wibbo-nav__li">
-                  <a href="/admin" target="_blank">{{ $t('navbar.admin') }}</a>
+                  <a :href="$nuxt.$config.public.adminUrl" target="_blank">{{ $t('navbar.admin') }}</a>
                 </li>
                 <NuxtLink :to="'/settings'">
                   <li class="wibbo-nav__li">
