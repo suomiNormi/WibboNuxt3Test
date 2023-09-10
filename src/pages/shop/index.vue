@@ -43,7 +43,7 @@
     </div>
 
     <div class="col-span-1">
-      <BaseShopPurse :vip_points="authUser.vip_points" :limit_coins="authUser.limit_coins" />
+      <BaseShopPurse :vip-points="authUser.vip_points" :limit-coins="authUser.limit_coins" />
     </div>
   </div>
 </template>
