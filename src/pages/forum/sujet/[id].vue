@@ -59,12 +59,12 @@
                 </b>
 
                 <div v-if="isConnected" class="float-right">
-                  <a v-if="sujet.statut == 0" class="forum__btn forum__btn--dark" @click.prevent="commentForm.message += '[quote]' + userd.message + '[/quote]'">
+                  <a v-if="sujet.statut == 0" class="mr-1 forum__btn forum__btn--dark" @click.prevent="commentForm.message += '[quote]' + userd.message + '[/quote]'">
                     <i class="fas fa-quote-right" />
                   </a>
 
                   <span v-if="authUser.id == userd.id_auteur || authUser.rank >= 6">
-                    <a class="forum__btn forum__btn--green" @click.prevent="editMessage(userd)">
+                    <a class="mr-1 forum__btn forum__btn--green" @click.prevent="editMessage(userd)">
                       <i class="fas fa-edit" />
                     </a>
                     <a class="forum__btn forum__btn--red" @click.prevent="deleteComment(userd.id)">
@@ -194,7 +194,7 @@ const editComment = async () => {
   try {
     loading.value = true
 
-    await useApiFetch('/api/v1/forum/edit/' + editId, { body: editForm.value, method: 'POST' })
+    await useApiFetch('/api/v1/forum/edit/' + editId.value, { body: editForm.value, method: 'POST' })
 
     const editMessage = userMessage.value.filter(m => m.id === editId.value)[0]
 
