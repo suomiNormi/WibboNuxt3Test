@@ -69,7 +69,7 @@
                   </NuxtLink>
                 </td>
                 <td class="align-middle">
-                  {{ filters.formatNumber(Math.round(data.online_time! / 3600)) }} Heures
+                  {{ filters.formatNumber(data.online_time!) }} Heures
                 </td>
               </tr>
             </tbody>
@@ -133,13 +133,11 @@ const connexions = ref<User[]>([])
 const moisvip = ref<User[]>([])
 
 try {
-  const data = await useApiFetch('/api/v1/classement/influences')
+  const data = await useApiFetch<{ respects: User[]; connexions: User[]; moisvip: User[] }>('/api/v1/classement/influences')
 
-  const connexionData = data.connexions as User[]
-
-  respects.value = data.respects as User[]
-  connexions.value = connexionData
-  moisvip.value = data.moisvip as User[]
+  respects.value = data.respects
+  connexions.value = data.connexions.map((x) => { return { ...x, online_time: Math.round(x.online_time! / 3600) } })
+  moisvip.value = data.moisvip
 } catch {}
 
 const respectsLast = computed(() => respects.value.slice(3, respects.value.length))

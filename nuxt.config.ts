@@ -28,7 +28,7 @@ export default defineNuxtConfig({
   },
 
   i18n: {
-      baseUrl: 'http://localhost:3000',
+      baseUrl: process.env.NUXT_PUBLIC_SITE_URL,
       locales: [
           { code: 'fr', iso: 'fr-FR', file: 'fr.json', name: 'Français' }, // Français - France, Canada, Belgique, Suisse
       ],
@@ -41,10 +41,10 @@ export default defineNuxtConfig({
 
   nitro: {
     devProxy: {
-      '/api/v1': { 
-        target: 'https://wibbo.org/api/v1', 
-        changeOrigin: true, 
-        prependPath: true 
+      '/api/v1': {
+        target: process.env.NUXT_PRIVATE_DEV_API,
+        changeOrigin: true,
+        prependPath: true
       }
     }
   },
