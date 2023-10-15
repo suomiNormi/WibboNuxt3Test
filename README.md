@@ -1,2 +1,2 @@
 # WibboNuxt3
- Front-end CMS for Wibbo with Nuxt 3
+ Front-end CMS - Wibbo Nuxt v.3
