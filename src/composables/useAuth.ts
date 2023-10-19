@@ -49,6 +49,7 @@ export const useAuth = () => {
   return {
     me,
     login,
-    logout
+    logout,
+    setCookie
   }
 }

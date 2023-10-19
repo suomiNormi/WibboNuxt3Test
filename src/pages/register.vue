@@ -73,9 +73,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { User } from '~/types'
-
-const authUser = useAuthUser()
+const { me, setCookie } = useAuth()
 
 definePageMeta({
   title: 'register',
@@ -97,14 +95,11 @@ const userRegister = async () => {
 
     const token = response.Authorization.split('Bearer ')[1]
 
-    cookieToken.value = token
+    setCookie(token)
 
-    const data = await useApiFetch<{ user: User }>('/api/v1/userdata')
-    if (!data) { throw new Error('Une erreur est survenue') }
+    await nextTick()
 
-    authUser.value = data.user
-
-    registerForm.value = { username: '', password: '', repassword: '', condition: false, email: '', recaptchaToken: '' }
+    await me()
 
     navigateTo('/home')
   } catch {
