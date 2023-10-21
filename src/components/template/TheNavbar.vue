@@ -261,30 +261,6 @@ const documentClick = (event: MouseEvent) => {
     z-index: 1000;
     font-size: 1.2rem;
 
-    //   &::before {
-    //     content: "";
-    //     position: absolute;
-    //     top: 50%;
-    //     left: 0;
-    //     height: 50%;
-    //     width: 2rem;
-    //     border-left: 4px solid rgba(0, 0, 0, 0.2);
-    //     border-bottom-left-radius: 1rem;
-    //     pointer-events: none;
-    // }
-
-    // &::after {
-    //     content: "";
-    //     position: absolute;
-    //     top: 50%;
-    //     right: 0;
-    //     height: 50%;
-    //     width: 1rem;
-    //     border-right: 4px solid rgba(0, 0, 0, 0.2);
-    //     border-bottom-right-radius: 1rem;
-    //     pointer-events: none;
-    // }
-
     &__toggle {
         color: #000;
         height: 100%;
