@@ -49,6 +49,7 @@ definePageMeta({
 const category = ref([
   { id: 11, name: 'Gestion' },
   { id: 6, name: 'Administration' },
+  { id: 7, name: 'Développement' },
   { id: 9, name: 'Évènement' },
   { id: 8, name: 'Animation' },
   { id: 3, name: 'Modération' },
