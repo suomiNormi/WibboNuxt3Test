@@ -21,7 +21,7 @@ import type { NitroLegacy } from '~/types'
 const SSOTicket = ref('')
 
 const loadSSOTicket = async () => {
-  SSOTicket.value = (await useApiFetch<{ SSOTicket: string }>('/api/v1/client/data')).SSOTicket as string
+  SSOTicket.value = (await useApiFetch<{ SSOTicket: string }>('client/data')).SSOTicket as string
 }
 
 loadSSOTicket()

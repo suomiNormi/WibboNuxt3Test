@@ -49,7 +49,7 @@ const pageId = ref(2)
 const photosEnd = ref(false)
 
 try {
-  const data = await useApiFetch<{ photos: Photo[] }>('/api/v1/community/photos')
+  const data = await useApiFetch<{ photos: Photo[] }>('community/photos')
 
   photos.value = data.photos
 } catch {}
@@ -76,7 +76,7 @@ const loadPhotos = async () => {
   try {
     loading.value = true
 
-    const data = (await useApiFetch<{ photos: Photo[] }>('/api/v1/community/photos?page=' + pageId)).photos
+    const data = (await useApiFetch<{ photos: Photo[] }>('community/photos?page=' + pageId)).photos
 
     if (!data.length) {
       loading.value = false

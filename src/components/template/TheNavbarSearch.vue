@@ -77,7 +77,7 @@ watch(
 
     searchInternal.value = window.setTimeout(async () => {
       try {
-        const { users } = await useApiFetch<{ users: User[] }>('/api/v1/search-user/' + value, { signal: abortController.signal })
+        const { users } = await useApiFetch<{ users: User[] }>('search-user/' + value, { signal: abortController.signal })
         searchUsers.value = users
       } catch (e) {}
       loading.value = false

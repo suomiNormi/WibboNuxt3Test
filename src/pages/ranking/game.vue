@@ -116,7 +116,7 @@ const topUser = ref<User[]>([])
 const best = ref<User[]>([])
 
 try {
-  const data = await useApiFetch<{ top: User[]; best: User[] }>('/api/v1/classement/gamer')
+  const data = await useApiFetch<{ top: User[]; best: User[] }>('classement/gamer')
 
   topUser.value = data.top
   best.value = data.best

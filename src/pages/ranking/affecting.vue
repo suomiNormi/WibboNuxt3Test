@@ -133,7 +133,7 @@ const connexions = ref<User[]>([])
 const moisvip = ref<User[]>([])
 
 try {
-  const data = await useApiFetch<{ respects: User[]; connexions: User[]; moisvip: User[] }>('/api/v1/classement/influences')
+  const data = await useApiFetch<{ respects: User[]; connexions: User[]; moisvip: User[] }>('classement/influences')
 
   respects.value = data.respects
   connexions.value = data.connexions.map((x) => { return { ...x, online_time: Math.round(x.online_time! / 3600) } })

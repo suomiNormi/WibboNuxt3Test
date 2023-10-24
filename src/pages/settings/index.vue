@@ -70,7 +70,7 @@ const generalPost = async () => {
   try {
     loading.value = true
 
-    await useApiFetch('/api/v1/settings/general', { body: generalForm.value, method: 'POST' })
+    await useApiFetch('settings/general', { body: generalForm.value, method: 'POST' })
 
     authUser.value.block_newfriends = +!generalForm.value.textamigo
     authUser.value.hide_online = +!generalForm.value.online

@@ -11,6 +11,8 @@ export default defineNuxtConfig({
           nitroUrl: process.env.NUXT_PUBLIC_NITRO_URL,
           adminUrl: process.env.NUXT_PUBLIC_ADMIN_URL,
           siteMail: process.env.NUXT_PUBLIC_SITE_MAIL,
+          clientApiUrl: process.env.NUXT_PUBLIC_CLIENT_API_URL,
+          serverApiUrl: process.env.NUXT_PUBLIC_SERVER_API_URL,
       },
   },
 

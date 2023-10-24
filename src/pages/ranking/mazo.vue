@@ -115,7 +115,7 @@ definePageMeta({
 const topUser = ref<User[]>([])
 const best = ref<User[]>([])
 try {
-  const data = await useApiFetch<{ top: User[]; best: User[] }>('/api/v1/classement/mazo')
+  const data = await useApiFetch<{ top: User[]; best: User[] }>('classement/mazo')
 
   topUser.value = data.top as User[]
   best.value = data.best as User[]

@@ -14,7 +14,7 @@ export const useAuth = () => {
   }
 
   const login = async (username: string, password: string) => {
-    const data = await useApiFetch<{ Authorization: string }>('/api/v1/login', { body: { username, password }, method: 'POST' })
+    const data = await useApiFetch<{ Authorization: string }>('login', { body: { username, password }, method: 'POST' })
 
     const token = data.Authorization?.split('Bearer ')[1]
 
@@ -33,7 +33,7 @@ export const useAuth = () => {
   const me = async () => {
     if (authToken.value && authUser.value.id === -1) {
       try {
-        const data = await useApiFetch<{ user: User }>('/api/v1/userdata')
+        const data = await useApiFetch<{ user: User }>('userdata')
 
         if (!data) {
           throw new Error('No user data')

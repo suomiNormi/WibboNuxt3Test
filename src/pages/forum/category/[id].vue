@@ -72,7 +72,7 @@ const refresh = async () => {
   try {
     const page = route.query.page ? '?page=' + route.query.page : ''
     const search = route.query.search ? 'search=' + route.query.search : ''
-    const data = await useApiFetch<{ post: Post[]; postPin: Post[]; totalPage: number }>('/api/v1/forum/category/' + route.params.id + page + (search ? (page ? '&' : '?') + search : ''))
+    const data = await useApiFetch<{ post: Post[]; postPin: Post[]; totalPage: number }>('forum/category/' + route.params.id + page + (search ? (page ? '&' : '?') + search : ''))
 
     post.value = data.post
     postPin.value = data.postPin

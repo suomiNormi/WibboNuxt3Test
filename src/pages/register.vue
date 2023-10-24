@@ -91,7 +91,7 @@ const userRegister = async () => {
   try {
     loading.value = true
 
-    const response = await useApiFetch<{ Authorization: string }>('/api/v1/register', { body: registerForm.value, method: 'POST' })
+    const response = await useApiFetch<{ Authorization: string }>('register', { body: registerForm.value, method: 'POST' })
 
     const token = response.Authorization.split('Bearer ')[1]
 

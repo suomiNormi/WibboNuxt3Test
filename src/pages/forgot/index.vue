@@ -45,7 +45,7 @@ const forgotPost = async () => {
   try {
     loading.value = true
 
-    await useApiFetch('/api/v1/forgot', { body: forgotForm.value, method: 'POST' })
+    await useApiFetch('forgot', { body: forgotForm.value, method: 'POST' })
 
     showAlert({
       message: 'Un mail de confirmation a été envoyé, check ta boite mail!',

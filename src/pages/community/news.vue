@@ -44,7 +44,7 @@ const route = useRoute()
 const lastNews = ref<Article[]>([])
 
 try {
-  const data = await useApiFetch<{ lastNews: Article[] }>('/api/v1/community/news-last')
+  const data = await useApiFetch<{ lastNews: Article[] }>('community/news-last')
 
   lastNews.value = data.lastNews
 } catch {}

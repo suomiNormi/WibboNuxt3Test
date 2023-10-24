@@ -53,7 +53,7 @@ const passwordPost = async () => {
   try {
     loading.value = true
 
-    await useApiFetch('/api/v1/settings/password', { body: passwordForm.value, method: 'POST' })
+    await useApiFetch('settings/password', { body: passwordForm.value, method: 'POST' })
 
     showAlert({
       message: 'Mot de passe changer!',

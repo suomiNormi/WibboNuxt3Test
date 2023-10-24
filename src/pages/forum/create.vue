@@ -73,7 +73,7 @@ const createPost = async () => {
   try {
     loading.value = true
 
-    const response = await useApiFetch<{ id: number }>('/api/v1/forum/create', { body: createForm.value, method: 'POST' })
+    const response = await useApiFetch<{ id: number }>('forum/create', { body: createForm.value, method: 'POST' })
 
     navigateTo('/forum/sujet/' + response.id)
 

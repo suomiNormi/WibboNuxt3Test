@@ -81,7 +81,7 @@ const forum = ref<Forum[]>([])
 const premiumDay = ref(0)
 const articles = ref<Article[]>([])
 
-const data = await useApiFetch<{ vip_time: number; news: Article[]; forum: Forum[] }>('/api/v1/me')
+const data = await useApiFetch<{ vip_time: number; news: Article[]; forum: Forum[] }>('me')
 
 if (data) {
   premiumDay.value = data.vip_time

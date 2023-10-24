@@ -45,7 +45,7 @@ const group = ref<Group>()
 const memberCount = ref(0)
 const owner = ref<Owner>({ username: '', look: '' })
 
-const data = await useApiFetch<{ group: Group; memberCount: number; owner: Owner }>('/api/v1/group/' + route.params.id)
+const data = await useApiFetch<{ group: Group; memberCount: number; owner: Owner }>('group/' + route.params.id)
 
 group.value = data.group
 memberCount.value = data.memberCount

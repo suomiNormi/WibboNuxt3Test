@@ -41,7 +41,7 @@ definePageMeta({
 const body = ref<Article | null>(null)
 
 try {
-  const data = await useApiFetch<{ body: Article }>('/api/v1/community/news/' + route.params.id)
+  const data = await useApiFetch<{ body: Article }>('community/news/' + route.params.id)
 
   body.value = data.body
 } catch {}

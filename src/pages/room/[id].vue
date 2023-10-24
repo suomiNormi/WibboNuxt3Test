@@ -34,7 +34,7 @@ const route = useRoute()
 const room = ref<Room>({ caption: '', owner: '', description: '' })
 
 try {
-  const data = await useApiFetch<{ room: Room }>('/api/v1/room/' + route.params.id)
+  const data = await useApiFetch<{ room: Room }>('room/' + route.params.id)
 
   room.value = data.room
 } catch {}

@@ -96,7 +96,7 @@ const contactPost = async () => {
 
     contactForm.value.sujet = sujetList.value.at(selectedSujetId.value) || ''
 
-    await useApiFetch('/api/v1/contact', { body: contactForm.value, method: 'POST' })
+    await useApiFetch('contact', { body: contactForm.value, method: 'POST' })
 
     showAlert({
       message: 'Votre demande a bien été envoyé',

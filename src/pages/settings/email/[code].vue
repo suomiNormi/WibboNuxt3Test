@@ -27,7 +27,7 @@ onMounted(async () => {
   if (!route.params.code) { return }
 
   try {
-    const data = await useApiFetch<{ check: MailCheck }>('/api/v1/settings/email/' + route.params.code, { method: 'PUT' })
+    const data = await useApiFetch<{ check: MailCheck }>('settings/email/' + route.params.code, { method: 'PUT' })
 
     if (data != null && data.check) {
       showAlert({

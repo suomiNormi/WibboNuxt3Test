@@ -148,7 +148,7 @@ const navCategory = ref<ICategory[]>([
 const refresh = async () => {
   try {
     const page = route.query.page ? '?page=' + route.query.page : ''
-    const data = await useApiFetch<{ totalPage: number; sujet: Sujet; userMessage: IMessage[] }>('/api/v1/forum/sujet/' + route.params.id + page)
+    const data = await useApiFetch<{ totalPage: number; sujet: Sujet; userMessage: IMessage[] }>('forum/sujet/' + route.params.id + page)
 
     totalPage.value = data.totalPage
     sujet.value = data.sujet
@@ -194,7 +194,7 @@ const editComment = async () => {
   try {
     loading.value = true
 
-    await useApiFetch('/api/v1/forum/edit/' + editId.value, { body: editForm.value, method: 'POST' })
+    await useApiFetch('forum/edit/' + editId.value, { body: editForm.value, method: 'POST' })
 
     const editMessage = userMessage.value.filter(m => m.id === editId.value)[0]
 
@@ -219,7 +219,7 @@ const commentSujet = async () => {
   try {
     loading.value = true
 
-    const response = await useApiFetch('/api/v1/forum/comment/' + route.params.id, { body: commentForm.value, method: 'POST' })
+    const response = await useApiFetch('forum/comment/' + route.params.id, { body: commentForm.value, method: 'POST' })
 
     if (!response) { throw new Error('Commentaire non envoyé') }
 
@@ -239,7 +239,7 @@ const updateCategory = async () => {
   try {
     loading.value = true
 
-    await useApiFetch('/api/v1/forum/deplace/' + route.params.id, { body: categoryForm.value, method: 'PUT' })
+    await useApiFetch('forum/deplace/' + route.params.id, { body: categoryForm.value, method: 'PUT' })
 
     showAlert({
       message: 'Sujet déplacé',
@@ -258,7 +258,7 @@ const deleteComment = async (id: number) => {
   try {
     loading.value = true
 
-    await useApiFetch('/api/v1/forum/delete/' + id, { method: 'DELETE' })
+    await useApiFetch('forum/delete/' + id, { method: 'DELETE' })
 
     showAlert({
       message: 'Commentaire supprimé',
@@ -279,7 +279,7 @@ const epingleToggle = async () => {
 
     const flag = sujet.value.type === 1
 
-    await useApiFetch('/api/v1/forum/epingle/' + sujet.value.id + '/' + flag, { method: 'PUT' })
+    await useApiFetch('forum/epingle/' + sujet.value.id + '/' + flag, { method: 'PUT' })
 
     showAlert({
       message: 'Sujet ' + (flag ? 'épinglé' : 'dé-épinglé'),
@@ -300,7 +300,7 @@ const statutToggle = async () => {
 
     const flag = sujet.value.statut === 1
 
-    await useApiFetch('/api/v1/forum/statut/' + sujet.value.id + '/' + flag, { method: 'PUT' })
+    await useApiFetch('forum/statut/' + sujet.value.id + '/' + flag, { method: 'PUT' })
 
     showAlert({
       message: 'Sujet ' + (flag ? 'ouvert' : 'fermer'),

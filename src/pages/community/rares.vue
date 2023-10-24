@@ -59,7 +59,7 @@ const rares = ref<Rare[]>([])
 const categorySelected = ref(1)
 
 try {
-  const data = await useApiFetch<{ rares: Rare[] }>('/api/v1/rares')
+  const data = await useApiFetch<{ rares: Rare[] }>('rares')
 
   rares.value = data.rares
 } catch {}

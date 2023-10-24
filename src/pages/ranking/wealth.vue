@@ -135,7 +135,7 @@ const wibbopoint = ref<User[]>([])
 const ltc = ref<User[]>([])
 
 try {
-  const data = await useApiFetch<{ winwin: User[]; wibbopoint: User[]; ltc: User[] }>('/api/v1/classement/joueur')
+  const data = await useApiFetch<{ winwin: User[]; wibbopoint: User[]; ltc: User[] }>('classement/joueur')
 
   winwin.value = data.winwin
   wibbopoint.value = data.wibbopoint

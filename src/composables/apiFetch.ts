@@ -7,7 +7,7 @@ export const useApiFetch = <T>(path: string, opts: Object = {}) => {
   if (authToken.value) { opts = { ...opts, ...{ headers: { Authorization: `Bearer ${authToken.value}` } } } }
 
   return $fetch<T>(path, {
-    baseURL: runtimeConfig.public.siteUrl,
+    baseURL: process.server ? runtimeConfig.public.serverApiUrl : runtimeConfig.public.clientApiUrl,
     onResponseError ({ response }) {
       const status = response.status
       const message = response._data.message ?? ''

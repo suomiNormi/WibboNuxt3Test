@@ -29,7 +29,7 @@ const { showAlert } = useNotification()
 const success = ref(false)
 
 try {
-  await useApiFetch('/api/v1/forgot/' + route.params.code.toString(), { method: 'PUT' })
+  await useApiFetch('forgot/' + route.params.code.toString(), { method: 'PUT' })
 
   showAlert({
     message: 'Ton nouveau mot de passe à été envoyer par mail! Va vite voir ta boite mail!',

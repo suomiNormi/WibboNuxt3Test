@@ -34,7 +34,7 @@ const totalPage = ref(1)
 
 try {
   const page = route.query.page ? '?page=' + route.query.page : ''
-  const data = await useApiFetch<{ listNews: Article[]; totalPage: number }>('/api/v1/community/news-list' + page)
+  const data = await useApiFetch<{ listNews: Article[]; totalPage: number }>('community/news-list' + page)
 
   newList.value = data.listNews
   totalPage.value = data.totalPage

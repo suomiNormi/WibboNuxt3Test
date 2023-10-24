@@ -179,7 +179,7 @@ const loading = ref(false)
 
 const page = route.query.page ? '?page=' + route.query.page.toString() : ''
 
-const data = await useApiFetch<{ user: User; stats: UserStats; groupe: Group[], totalPage: number, badgecount: number, nombreDePages: number, countcoeur: number, countami: number, countdead: number, randomcoeur: Relation, randomami: Relation, randomdead: Relation }>('/api/v1/profil/' + route.params.username)
+const data = await useApiFetch<{ user: User; stats: UserStats; groupe: Group[], totalPage: number, badgecount: number, nombreDePages: number, countcoeur: number, countami: number, countdead: number, randomcoeur: Relation, randomami: Relation, randomdead: Relation }>('profil/' + route.params.username)
 if (data) {
   user.value = data.user as User
   stats.value = data.stats as UserStats
@@ -195,7 +195,7 @@ if (data) {
   randomdead.value = data.randomdead as Relation
 }
 
-const dataTwo = await useApiFetch<{ badgescode: Badge[] }>('/api/v1/profil-badges/' + data.user.id + page)
+const dataTwo = await useApiFetch<{ badgescode: Badge[] }>('profil-badges/' + data.user.id + page)
 if (dataTwo) {
   badgescode.value = dataTwo.badgescode
 }
@@ -218,7 +218,7 @@ watch(
 
       if (pageNum > totalPage.value) { pageNum = totalPage.value }
 
-      badgescode.value = (await useApiFetch<{ badgescode: Badge[] }>('/api/v1/profil-badges/' + user.value.id + '?page=' + pageNum)).badgescode
+      badgescode.value = (await useApiFetch<{ badgescode: Badge[] }>('profil-badges/' + user.value.id + '?page=' + pageNum)).badgescode
     } catch {}
 
     loading.value = false
