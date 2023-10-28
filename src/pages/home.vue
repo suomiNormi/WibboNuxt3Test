@@ -1,6 +1,6 @@
 <template>
   <div class="grid grid-cols-1 gap-4 lg:grid-cols-3">
-    <div class="col-span-3">
+    <div class="col-span-1 lg:col-span-3">
       <NuxtLink v-if="authUser.mail == ''" to="/settings/email">
         <BaseAlert is-error>
           {{ $t('home.warning-email') }}
