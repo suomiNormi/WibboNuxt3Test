@@ -6,18 +6,21 @@
           <p class="mb-1">
             {{ $t('footer.social-follow') }}
           </p>
-          <!-- <BaseSocialLink href="https://www.facebook.com/WibboHotelFR" aria-label="Facebook" class="bg-[#4267b2] hover:bg-[#5d93fd]">
-            <i class="fab fa-facebook-f" />
-          </BaseSocialLink> -->
           <BaseSocialLink href="https://discord.gg/j2QezGGNDU" aria-label="Discord" class="bg-[#2b2b2b] hover:bg-[#525252]">
             <i class="fab fa-discord" />
           </BaseSocialLink>
-          <BaseSocialLink href="https://twitter.com/WibboORG" aria-label="Twitter" class="bg-[#1da1f2] hover:bg-[#5ebcf7]">
+          <!-- <BaseSocialLink href="https://www.facebook.com/WibboHotelFR" aria-label="Facebook" class="bg-[#4267b2] hover:bg-[#5d93fd]">
+            <i class="fab fa-facebook-f" />
+          </BaseSocialLink> -->
+          <!-- <BaseSocialLink href="https://discord.gg/j2QezGGNDU" aria-label="Discord" class="bg-[#2b2b2b] hover:bg-[#525252]">
+            <i class="fab fa-discord" />
+          </BaseSocialLink> -->
+          <!-- <BaseSocialLink href="https://twitter.com/WibboORG" aria-label="Twitter" class="bg-[#1da1f2] hover:bg-[#5ebcf7]">
             <i class="fab fa-twitter" />
-          </BaseSocialLink>
-          <BaseSocialLink href="https://www.instagram.com/wibbo_org/" aria-label="Instagram" class="bg-gradient-to-r from-yellow-700 to-pink-500">
+          </BaseSocialLink> -->
+          <!-- <BaseSocialLink href="https://www.instagram.com/wibbo_org/" aria-label="Instagram" class="bg-gradient-to-r from-yellow-700 to-pink-500">
             <i class="fab fa-instagram" />
-          </BaseSocialLink>
+          </BaseSocialLink> -->
         </div>
 
         <div class="lg:col-span-3">

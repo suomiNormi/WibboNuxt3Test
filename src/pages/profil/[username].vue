@@ -3,7 +3,7 @@
     <div class="col-span-1">
       <BaseCard class="mb-4">
         <template #title>
-          Profile de {{ user.username }}
+          Profil de {{ user.username }}
         </template>
         <template #body>
           <div class="profil">
@@ -201,7 +201,7 @@ if (dataTwo) {
 }
 
 useHead({
-  title: `Profile de ${user.value.username}`
+  title: `Profil de ${user.value.username}`
 })
 
 watch(
