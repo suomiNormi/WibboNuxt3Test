@@ -13,7 +13,7 @@
           <b>L’accès au Site et aux services proposés sont réservés aux personnes âgées de plus de 13 ans.</b>
           <br><br>
           Un monde sécurisé et très apprécié des adolescents: Wibbo<br>
-          Entre lieux publics ou se rencontrent tous types de joueurs et apparts privés très hypes, la diversité d'Wibbo est complète et notre renommée en est le plus significatif
+          Entre lieux publics ou se rencontrent tous types de joueurs et apparts privés très hypes, la diversité de Wibbo est complète et notre renommée en est le plus significatif
           témoignage.
           <br><br>
           Si vous avez moins de 18 ans, vous devez demander à vos parents ou tuteurs de vous expliquer tous les termes ou expressions utilisés ci-dessous que vous ne comprenez pas et valider
@@ -25,7 +25,7 @@
     <div class="grid grid-cols-3 gap-2">
       <BaseCard>
         <template #body>
-          <h4><b>1. Charges et responsabilités d'Wibbo</b></h4>
+          <h4><b>1. Charges et responsabilités de Wibbo</b></h4>
           <br>
           <b>1.1</b>
           Wibbo Hôtel utilise les ressources de Sulake Corporation LTD et offre à ses joueurs une alternative majoritairement gratuite à Habbo Hôtel, développé par cette même société. Le but
@@ -34,13 +34,13 @@
           <br><br>
           <b>1.2</b>
           Wibbo Hôtel dispose d'une boutique permettant à ses utilisateurs de profiter d'avantages en jeu, mais s'en dispenser n'alterne en aucun cas la qualité de jeu. Tous les achats
-          effectués sur la boutique virtuelle d'Wibbo permettent d'améliorer nos infrastructures utilisant une technologie connue et largement populaire, payer les noms de domaines et les
+          effectués sur la boutique virtuelle de Wibbo permettent d'améliorer nos infrastructures utilisant une technologie connue et largement populaire, payer les noms de domaines et les
           serveurs de jeu. Les membres qui composent notre équipe ne sont donc pas rémunérés pour les services qu'ils proposent de façon bénévole. Toutes les transactions d'achat de LimitCoins
           effectuées en boutique sont vérifiées par un prestataire indépendant: les remboursment, hors panne technique de nos services web, s'effectuent donc auprès d'eux. Les utilisateurs
           de - de 13 ans ne peuvent pas acheter des LimitCoins sur Wibbo sans l'accord de leurs parents.
           <br><br>
           <b>1.3</b>
-          Toute réclamation envers Wibbo Hôtel d'ayants-droits et représentants de Sulake Corporation LTD se fera après un contact avec le créateur d'Wibbo Hôtel clair et explicite. Wibbo
+          Toute réclamation envers Wibbo Hôtel d'ayants-droits et représentants de Sulake Corporation LTD se fera après un contact avec le créateur de Wibbo Hôtel clair et explicite. Wibbo
           Hôtel se réserve le droit de ne pas répondre à des appels ou des mails préventifs lorsque ceux-ci ne s'effectuent pas par l'intermédiaire du fournisseur d'accès internet du
           propriétaire du site, toujours dans le soucis de confirmer l'identité de l'ayant-droit.
           <br><br>
@@ -51,7 +51,7 @@
           comportements sensibles.
           <br><br>
           <b>1.5</b>
-          Toute personne tierce solicitée pour le développement d'Wibbo Hôtel et éventuellement rémunérée n'est pas nécessairement consciente qu'Wibbo Hôtel utilise les ressources de Sulake
+          Toute personne tierce solicitée pour le développement de Wibbo Hôtel et éventuellement rémunérée n'est pas nécessairement consciente qu'Wibbo Hôtel utilise les ressources de Sulake
           Corporation LTD et/ou éventuellement de l'illégalité du site, ses compétences étant universelles et ne concernant pas de manière spécifique la gestion d'un hôtel virtuel tel
           qu'Wibbo Hôtel. Toute accusation d'association de malfaiteurs serait irrecevable.
           <br><br>
@@ -106,7 +106,7 @@
           ou du physique d'une personne dans le strict but de la rabaisser sera traitée comme un acte de de harcèlement et sévèrement sanctionné.
           <br><br>
           <b>2.8</b>
-          Toutes les activités sexuelles imaginables sur un jeu en ligne sont exclues d'Wibbo Hôtel. Les discussions et comportements de ce type sont interdits, dans le soucis de garantir à
+          Toutes les activités sexuelles imaginables sur un jeu en ligne sont exclues de Wibbo Hôtel. Les discussions et comportements de ce type sont interdits, dans le soucis de garantir à
           nos utilisateurs leur sécurité et écarter les individus suspects de notre plateforme. Ceci s'applique à la demande de plan cam.
           <br><br>
           <b>2.9</b>

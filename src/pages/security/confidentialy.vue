@@ -12,7 +12,7 @@
         Wibbo maintient un niveau de protection des données à caractère personnel extrêmement élevé. Nous traitons vos données à caractère personnel uniquement à des fins appropriées définies
         à l'avance et uniquement lorsque cela est nécessaire.
         <br><br>
-        <u><h4>1. Confidentialité et protection des données.</h4></u>
+        <u><h4>1. Confidentialité et protection des données</h4></u>
         <br>
         Nous respectons votre vie privée et nous nous engageons à protéger la vie privée de ces personnes («utilisateur(s)» ou «vous») qui accèdent et utilisent nos jeux.
         <br><br>
@@ -68,7 +68,7 @@
           - Informations de contact, comme l'adresse e-mail et les informations de contact sur les réseaux sociaux.<br>
           - Informations sur le périphérique, telles que le modèle de périphérique et la version du système d'exploitation.<br>
           - Informations de transaction et de paiement.<br>
-          - Historique du client Par exemple, si vous nous contactez par l'intermédiaire de notre service client, nous pouvons conserver un enregistrement de cette correspondance.<br>
+          - Historique du client. Par exemple, si vous nous contactez par l'intermédiaire de notre service client, nous pouvons conserver un enregistrement de cette correspondance.<br>
           - Journal des chats. Nous pouvons enregistrer les chats à des fins de sécurité et de modération.<br>
           - Données générées par l'utilisation des Services, telles que les données techniques générées en jouant à nos jeux ou lors de la visite de nos sites Web.<br>
           - Informations sur les cookies et les cookies tiers ainsi que les données d'analyse Web correspondantes.<br>
@@ -113,7 +113,7 @@
         appareils.
         <br><br>
         <u><h4>5. Publicité</h4></u>
-        <br><br>
+        <br>
         Nos Services peuvent inclure des annonces pour des produits et services tiers. Pour vous montrer des publicités tierces pertinentes et intéressantes, nous et nos partenaires
         publicitaires utiliserons les informations vous concernant. Un exemple de ce type d'informations peut être lorsque vous avez acheté un produit à partir d'un certain site Web ou entré
         un terme spécifique dans un moteur de recherche. Vous pouvez vous désinscrire des publicités basées sur les centres d'intérêt, mais cela ne signifie pas que vous ne recevrez plus

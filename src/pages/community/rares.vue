@@ -2,7 +2,7 @@
   <div class="grid grid-cols-1 gap-4">
     <div class="col-span-full">
       <h2 class="uppercase">
-        Wibbo Rares lootbox 2022
+        Wibbo Rares lootbox
       </h2>
     </div>
     <div class="col-span-full">
@@ -95,7 +95,7 @@ const nameCategory = (rarityLevel: number) => {
     case 3:
       return 'Épique'
     case 4:
-      return 'Légendaires'
+      return 'Légendaire'
   }
 
   return 'rare'

@@ -19,12 +19,12 @@
             </label>
 
             <label for="joinCheck" class="flex items-center cursor-pointer">
-              <div class="leading-8"><b>Préférences rejoindre :</b> Activer ou désactiver la possibilité d'être suivit dans les apparts</div>
+              <div class="leading-8"><b>Préférences rejoindre:</b> Activer ou désactiver la possibilité d'être suivit dans les apparts</div>
               <BaseCheckBox id="joinCheck" v-model="generalForm.join" class="ml-auto" name="join" />
             </label>
 
             <label for="trocCheck" class="flex items-center cursor-pointer">
-              <div class="leading-8"><b>Troc :</b> Activer ou désactiver l'envoie d'échange</div>
+              <div class="leading-8"><b>Troc:</b> Activer ou désactiver l'envoie d'échange</div>
               <BaseCheckBox id="trocCheck" v-model="generalForm.troc" class="ml-auto" name="troc" />
             </label>
 

@@ -9,15 +9,15 @@
         <template #body>
           <form class="grid grid-cols-1 gap-3" @submit.prevent="contactPost">
             <div class="col-span-1">
-              <label for="contactInputUserName" class="form-label">Mon nom de Wibbo est ...</label>
+              <label for="contactInputUserName" class="form-label">Mon nom de Wibbo est...</label>
               <BaseInput id="contactInputUserName" v-model="contactForm.username" name="username" aria-describedby="emailUserName" placeholder="Pseudonyme" />
-              <small id="emailUserName" class="form-text">Merci d'indiquer ton pseudonyme</small>
+              <small id="emailUserName" class="form-text">Merci d'indiquer ton pseudonyme.</small>
             </div>
 
             <div class="col-span-1">
               <label for="contactInputPseudo" class="form-label">Ton e-mail</label>
               <BaseInput id="contactInputemail" v-model="contactForm.email" name="email" aria-describedby="emailHelp" placeholder="Adresse e-mail" />
-              <small id="emailHelp" class="form-text">Indique l'email où tu pourras recevoir une réponse de notre part</small>
+              <small id="emailHelp" class="form-text">Indique l'email où tu pourras recevoir une réponse de notre part.</small>
             </div>
 
             <div class="col-span-1">

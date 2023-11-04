@@ -30,7 +30,7 @@
             <p>
               Relooker ton avatar avec toutes les tendances les plus folles n'est pas la seule façon de s'amuser sur Wibbo. Tu veux être l'architecte du siècle et construire des
               structures éblouissantes? Tu veux montrer tes compétences de fou de construction de jeu et émerveiller tes amis? Rejoins les concours! Es-tu fan de selfies et photos
-              drôles? Notre appareil photo sera une diversion sans fin pour toi!
+              drôles? Notre appareil photo sera une diversion sans fin pour toi !
             </p>
           </div>
         </template>
@@ -49,7 +49,7 @@
             <p>
               Que tout le monde fasse quelque chose n'est pas une raison pour toi de le faire si tu n'es pas à l'aise Tu aimes discuter et sortir avec tes amis ? Les groupes Wibbo,
               forums et les jeux de rôles c'est la direction à prendre pour commencer. Rejoins l'armée pour faire ton devoir. Enfiler une cape pour sauver l'univers. Ou deviens une
-              infirmière et sauve des vies de pixels. Inscris toi et commence à explorer les possibilités infinies de rôle
+              infirmière et sauve des vies de pixels. Inscris toi et commence à explorer les possibilités infinies de rôles.
             </p>
           </div>
         </template>
@@ -68,7 +68,7 @@
             <p>
               La créativité et l'originalité sont les bienvenues sur Wibbo ! Chaque semaine nous avns de supers compétitions que tu peux rejoindre. Des constructions d'apparts, aux
               selfies, des vidéos ou des compétitions d'écriture - une tonne de trucs cools t'attendent pour laisser libre-court à ton élan artistique et gagner quelques winwin +
-              d'autres prix! Tu es prêt ?
+              d'autres prix ! Tu es prêt ?
             </p>
           </div>
         </template>

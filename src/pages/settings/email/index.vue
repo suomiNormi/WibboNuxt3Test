@@ -23,7 +23,7 @@
           </div>
 
           <div class="col-span-1">
-            <small id="newPassWord" class="form-text">Ton email sera utilisée pour les newsletter ainsi que pour récupérer ton mot de passe !</small>
+            <small id="newPassWord" class="form-text">Ton email sera utilisée pour les newsletters ainsi que pour récupérer ton mot de passe !</small>
           </div>
 
           <div class="col-span-1">

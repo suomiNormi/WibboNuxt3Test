@@ -11,7 +11,7 @@
             <div class="limitcoins__sac" />
             <div class="limitcoins__buy">
               <p class="limitcoins__about">
-                Le <b>LimitCoin (LTC)</b> est une monnaie de l'hôtel, il sert principalement à acheter des mobiliers en édition limitée ultra-rare, le premium club et divers chose dans la boutique de l'hôtel!
+                Le <b>LimitCoin (LTC)</b> est une monnaie de l'hôtel, il sert principalement à acheter des mobiliers en édition limitée ultra-rare, le premium club et diverses choses dans la boutique de l'hôtel.
               </p>
 
               <div class="px-2" style="background-color: #fff; border: 2px solid rgba(0, 0, 0, 0.2)">
