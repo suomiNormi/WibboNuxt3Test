@@ -26,5 +26,3 @@ defineProps({
 
 const handleError = () => clearError({ redirect: '/' })
 </script>
-
-<style lang="scss"></style>
