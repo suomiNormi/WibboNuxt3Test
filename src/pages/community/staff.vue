@@ -62,9 +62,9 @@ const category = ref([
 const staffs = ref<Staff[]>([])
 
 try {
-  const data = await useApiFetch<any>('community/staff')
+  const data = await useApiFetch<{ staff: Staff[] }>('community/staff')
 
-  staffs.value = data.staff as Staff[]
+  staffs.value = data.staff
 } catch (e) {}
 
 onMounted(() => {
