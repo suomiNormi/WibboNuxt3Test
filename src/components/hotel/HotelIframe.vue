@@ -3,10 +3,11 @@
     <iframe
       v-if="SSOTicket != ''"
       id="flash-container"
-      :src="$nuxt.$config.public.nitroUrl + '?sso=' + SSOTicket"
+      :src="$nuxt.$config.public.nitroUrl + '?sso=' + SSOTicket + '&userid=' + authUser.id"
       width="100%"
       height="100%"
       frameborder="0"
+      allow="autoplay; microphone"
     />
 
     <HotelBtn />
@@ -15,8 +16,9 @@
 
 <script lang="ts" setup>
 import HotelBtn from './HotelBtn.vue'
-
 import type { NitroLegacy } from '~/types'
+
+const authUser = useAuthUser()
 
 const SSOTicket = ref('')
 
