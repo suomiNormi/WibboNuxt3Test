@@ -8,21 +8,19 @@
     <div v-for="(data) in photos" :key="data.photo" class="flex items-center justify-center col-span-1">
       <div class="photos" @click="photoSelected = data">
         <img :src="$nuxt.$config.public.cdnUrl + '/photos/' + data.photo + '.png'" class="photos__background" onerror="style.display='none'">
-        <transition name="opacity">
-          <div class="flex items-center photos__about">
-            <div>
-              <BaseAvatar :alt="'Photo de ' + data.username" :figure="data.look" headonly />
-            </div>
-            <div>
-              <h5>
-                <NuxtLink :to="'/profil/' + data.username" class="photos__link">
-                  {{ data.username }}
-                </NuxtLink>
-              </h5>
-              <span>Il y a {{ filters.timeAgo(data.time) }}</span>
-            </div>
+        <div class="flex items-center photos__about">
+          <div>
+            <BaseAvatar :alt="'Photo de ' + data.username" :figure="data.look" headonly />
           </div>
-        </transition>
+          <div>
+            <h5>
+              <NuxtLink :to="'/profil/' + data.username" class="photos__link">
+                {{ data.username }}
+              </NuxtLink>
+            </h5>
+            <span>Il y a {{ filters.timeAgo(data.time) }}</span>
+          </div>
+        </div>
       </div>
     </div>
     <BaseModal :show="photoSelected !== null" @close="photoSelected = null">
