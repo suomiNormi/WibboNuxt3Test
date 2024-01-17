@@ -28,29 +28,27 @@ const loadSSOTicket = async () => {
 
 loadSSOTicket()
 
-window.addEventListener(
-  'message',
-  (event) => {
-    try {
-      const data = event.data
+window.addEventListener('message', (event) => {
+  try {
+    const data = event.data
 
-      if (!(typeof data === 'string')) { return }
+    if (!(typeof data === 'string')) { return }
 
-      if (!data.startsWith('Nitro_LegacyExternalInterface')) { return }
+    if (!data.startsWith('Nitro_LegacyExternalInterface')) { return }
 
-      const nitroLegacy = JSON.parse(data.split('Nitro_LegacyExternalInterface')[1]) as NitroLegacy
+    const nitroLegacy = JSON.parse(data.split('Nitro_LegacyExternalInterface')[1]) as NitroLegacy
 
-      if (!nitroLegacy) { return }
+    if (!nitroLegacy) { return }
 
-      switch (nitroLegacy.method) {
-        case 'disconnect': {
-          setTimeout(() => loadSSOTicket(), 4500)
-          break
-        }
+    switch (nitroLegacy.method) {
+      case 'disconnect': {
+        setTimeout(() => loadSSOTicket(), 4500)
+        break
       }
-    } catch (e) { }
-  },
-  false
+    }
+  } catch (e) { }
+},
+false
 )
 </script>
 

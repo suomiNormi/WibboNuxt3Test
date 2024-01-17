@@ -1,14 +1,8 @@
-export const formatToHour = (value: number) => {
-  return Math.floor(value / 3600)
-}
+export const formatToHour = (value: number) => Math.floor(value / 3600)
 
-export const formatNumber = (value: number) => {
-  return String(value).replace(/(.)(?=(\d{3})+$)/g, '$1 ')
-}
+export const formatNumber = (value: number) => String(value).replace(/(.)(?=(\d{3})+$)/g, '$1 ')
 
-export const toHash = (value: string) => {
-  return encodeURI(value.replace(' ', '').toLowerCase())
-}
+export const toHash = (value: string) => encodeURI(value.replace(' ', '').toLowerCase())
 
 export const formatDateComplet = (value: number) => {
   const date = new Date(value * 1000)
@@ -53,12 +47,12 @@ export const timeAgo = (timestamp: number) => {
   return Math.floor(seconds) + ' seconde' + (Math.floor(seconds) > 1 ? 's' : '')
 }
 
-export const round = (value: number) => {
-  return Math.floor(value)
-}
+export const round = (value: number) => Math.floor(value)
+
+export const htmlEntities = (str: string) => String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
 
 export const bbcode = (text: string) => {
-  text = text.replace(/</igm, '&lt')
+  text = htmlEntities(text)
   return bbcodeList.reduce((text, code) => text.replace(code.regexp, code.replacement), text)
 }
 
