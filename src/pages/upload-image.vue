@@ -36,7 +36,7 @@
 <script lang="ts" setup>
 definePageMeta({
   title: 'upload-image',
-  middleware: ['un-authenticated']
+  middleware: ['authenticated']
 })
 
 const authUser = useAuthUser()
