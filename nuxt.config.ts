@@ -48,24 +48,21 @@ export default defineNuxtConfig({
         changeOrigin: true,
         prependPath: true
       }
-    }
+    },
   },
 
   sitemap: {
-      autoI18n: false,
+      sources: ['/api/sitemap'],
       sitemaps: {
           forum: {
-            include: [
-              '/forum/sujet/**',
-            ],
+            include: ['/forum/sujet/**'],
           },
           article: {
-              include: [
-                  '/community/news/**',
-              ],
+              include: ['/community/news/**'],
               exclude: ['/community/news-list']
           },
-          base: {
+          pages: {
+              includeAppSources: true,
               include: ['/**', '/community/news-list', '/forum/category/0', '/forum/category/4', '/forum/category/1', '/forum/category/2', '/forum/category/3', '/forum/category/6', '/forum/category/7'],
               exclude: ['/upload-image', '/community/news/**', '/forum/sujet/**', '/hotel', '/home', '/settings/**', '/shop', 'forum/create'],
             },
@@ -164,5 +161,5 @@ export default defineNuxtConfig({
 
   css: ['@/assets/scss/main.scss', '@/assets/css/tailwind.css'],
 
-  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/i18n', 'nuxt-simple-sitemap', '@vite-pwa/nuxt', '@nuxtjs/robots', '@nuxtjs/eslint-module'], //, 'nuxt-security'
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/i18n', '@nuxtjs/sitemap', '@vite-pwa/nuxt', '@nuxtjs/robots', '@nuxtjs/eslint-module'], //, 'nuxt-security'
 })

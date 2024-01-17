@@ -7,7 +7,7 @@ export default cachedEventHandler(
   async () => {
     const runtimeConfig = useRuntimeConfig()
 
-    const { lastNews, posts } = (await $fetch<SiteMap>(runtimeConfig.public.serverApiUrl + 'map/data'))
+    const { lastNews, posts } = (await $fetch<SiteMap>(runtimeConfig.public.serverApiUrl + '/map/data'))
 
     const routeLastNews = lastNews.map((p) => {
       return { loc: `/community/news/${p.id}/${p.link_keyword}`, lastmod: new Date(p.timestamp * 1000) } // images: [{ loc: p.topstory_image, title: p.title }]
