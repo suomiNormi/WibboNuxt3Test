@@ -143,10 +143,10 @@ const resetTimer = () => {
         position: absolute;
         top: 40px;
         left: 20px;
+        width: 60%;
     }
 
     &__title {
-        max-width: 60%;
         text-shadow: 0 1px rgba(0, 0, 0, 0.3);
         font-weight: bold;
         text-transform: uppercase;
