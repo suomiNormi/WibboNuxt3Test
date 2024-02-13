@@ -37,14 +37,14 @@
       <div class="flex-row lg:ml-auto lg:flex" :class="{ hidden: !navToggle }">
         <div class="wibbo-nav__dropdown">
           <NuxtLink to="/home" class="wibbo-nav__link alone">
-            <i class="navbar-icon navbar-icon--home" />
+            <i class="mr-2 navbar-icon navbar-icon--home" />
             <span class="wibbo-nav__text">{{ $t('navbar.home') }}</span>
           </NuxtLink>
         </div>
 
         <div class="wibbo-nav__dropdown">
           <div class="wibbo-nav__link" :class="dropName == 'comm' ? 'rotate' : ''" @click="dropName = dropName == 'comm' ? '' : 'comm'">
-            <i class="navbar-icon navbar-icon--commu" />
+            <i class="mr-2 navbar-icon navbar-icon--commu" />
             <span :class="{ 'wibbo-nav__text': true, 'max-w-max': dropName == 'comm' }">{{ $t('navbar.community') }}</span>
           </div>
 
@@ -83,7 +83,7 @@
 
         <div class="wibbo-nav__dropdown">
           <div class="wibbo-nav__link" :class="dropName == 'secu' ? 'rotate' : ''" @click="dropName = dropName == 'secu' ? '' : 'secu'">
-            <i class="navbar-icon navbar-icon--secu" />
+            <i class="mr-2 navbar-icon navbar-icon--secu" />
             <span :class="{ 'wibbo-nav__text': true, 'max-w-max': dropName == 'secu' }">{{ $t('navbar.security') }}</span>
           </div>
 
@@ -117,14 +117,14 @@
 
         <div class="wibbo-nav__dropdown">
           <NuxtLink :to="'/shop'" class="wibbo-nav__link alone">
-            <i class="navbar-icon navbar-icon--shop" />
+            <i class="mr-2 navbar-icon navbar-icon--shop" />
             <span class="wibbo-nav__text">{{ $t('navbar.shop') }}</span>
           </NuxtLink>
         </div>
 
         <div class="wibbo-nav__dropdown">
           <div class="wibbo-nav__link" :class="dropName == 'top' ? 'rotate' : ''" @click="dropName = dropName == 'top' ? '' : 'top'">
-            <i class="navbar-icon navbar-icon--top" />
+            <i class="mr-2 navbar-icon navbar-icon--top" />
             <span :class="{ 'wibbo-nav__text': true, 'max-w-max': dropName == 'top' }">{{ $t('navbar.ranking') }}</span>
           </div>
 
@@ -170,7 +170,7 @@
               gesture="sml"
               size="s"
               headonly
-              class="inline-block"
+              class="inline-block -ml-2"
             />
             <span :class="{ 'wibbo-nav__text': true, 'max-w-max': dropName == 'avatar' }">Moi</span>
           </div>
@@ -340,7 +340,9 @@ const documentClick = (event: MouseEvent) => {
     }
 
     &__link {
-        display: block;
+        display: flex;
+        // justify-content: center;
+        // align-items: center;
         position: relative;
         background-color: rgba(0, 0, 0, 0.1);
         border: 1px solid rgba(0, 0, 0, 0.4);
@@ -476,16 +478,11 @@ const documentClick = (event: MouseEvent) => {
     display: inline-block;
     width: 20px;
     height: 20px;
-    margin-right: 0.5rem;
+    //margin-right: 0.5rem;
 
     background: url(~/assets/imgs/navbar.png) no-repeat 0 0;
 
     position: relative;
-
-    @screen lg {
-        left: 3px;
-        top: 1px;
-    }
 
     &--home {
         background-position-y: 0;
@@ -509,10 +506,6 @@ const documentClick = (event: MouseEvent) => {
 
     &--hotel {
         background-position-x: -100px;
-
-        @screen lg {
-            left: 2px;
-        }
     }
 }
 </style>
