@@ -18,7 +18,7 @@
     "@nuxtjs/tailwindcss": "6.10.1",
     "@vite-pwa/nuxt": "^0.3.6",
     "eslint": "8.48.0",
-    "nuxt": "^3.10.1",
+    "nuxt": "^3.10.3",
     "nuxt-security": "^1.0.0",
     "nuxt-simple-sitemap": "4.2.0",
     "postcss-custom-properties": "13.3.3",
