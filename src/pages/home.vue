@@ -15,7 +15,6 @@
               <BaseAvatar
                 :figure="authUser.look"
                 size="l"
-                gesture="nrm"
                 :head-irection="3"
                 class="absolute top-3/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[128px] h-[220px]"
                 alt="Wibbo avatar"
