@@ -9,23 +9,22 @@
     "lint:js": "eslint src --ext .ts,.vue --fix"
   },
   "devDependencies": {
-    "@nuxt/devtools": "^1.0.6",
+    "@nuxt/devtools": "^1.1.5",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@nuxtjs/eslint-module": "^4.1.0",
-    "@nuxtjs/i18n": "8.0.0-rc.11",
+    "@nuxtjs/i18n": "8.2.0",
     "@nuxtjs/robots": "^3.0.0",
-    "@nuxtjs/sitemap": "^5.0.1",
-    "@nuxtjs/tailwindcss": "6.10.1",
-    "@vite-pwa/nuxt": "^0.3.6",
+    "@nuxtjs/sitemap": "^5.1.2",
+    "@nuxtjs/tailwindcss": "6.11.4",
+    "@vite-pwa/nuxt": "^0.6.0",
     "eslint": "8.48.0",
-    "nuxt": "^3.10.3",
-    "nuxt-security": "^1.0.0",
-    "nuxt-simple-sitemap": "4.2.0",
-    "postcss-custom-properties": "13.3.3",
-    "typescript": "5.2.2"
+    "nuxt": "^3.11.1",
+    "nuxt-security": "^1.2.2",
+    "postcss-custom-properties": "13.3.6",
+    "typescript": "5.4.3"
   },
   "dependencies": {
-    "sass": "1.69.5",
+    "sass": "1.72.0",
     "vue-recaptcha": "2.0.3"
   }
 }
