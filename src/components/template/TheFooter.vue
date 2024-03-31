@@ -6,7 +6,7 @@
           <p class="mb-1">
             {{ $t('footer.social-follow') }}
           </p>
-          <BaseSocialLink href="https://discord.gg/j2QezGGNDU" aria-label="Discord" class="bg-[#2b2b2b] hover:bg-[#525252]">
+          <BaseSocialLink href="https://discord.wibbo.org" aria-label="Discord" class="bg-[#2b2b2b] hover:bg-[#525252]">
             <i class="fab fa-discord" />
           </BaseSocialLink>
           <BaseSocialLink href="https://www.facebook.com/WibboHotelFR" aria-label="Facebook" class="bg-[#4267b2] hover:bg-[#5d93fd]">

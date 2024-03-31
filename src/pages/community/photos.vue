@@ -5,7 +5,7 @@
         Les photos communautaire
       </h1>
     </div>
-    <div v-for="(data) in photos" :key="data.photo" class="flex items-center justify-center col-span-1">
+    <div v-for="data in photos" :key="data.photo" class="flex items-center justify-center col-span-1">
       <div class="photos" @click="photoSelected = data">
         <img :src="$nuxt.$config.public.cdnUrl + '/photos/' + data.photo + '.png'" class="photos__background" onerror="style.display='none'">
         <div class="flex items-center photos__about">
@@ -24,7 +24,22 @@
       </div>
     </div>
     <BaseModal :show="photoSelected !== null" @close="photoSelected = null">
-      <img v-if="photoSelected" :src="$nuxt.$config.public.cdnUrl + '/photos/' + photoSelected.photo + '.png'" class="photos__background" onerror="style.display='none'">
+      <div v-if="photoSelected" class="flex flex-col items-center">
+        <img :src="$nuxt.$config.public.cdnUrl + '/photos/' + photoSelected.photo + '.png'" class="photos__background" onerror="style.display='none'">
+        <div class="flex items-center w-full text-white bg-black bg-opacity-60">
+          <div>
+            <BaseAvatar :alt="'Photo de ' + photoSelected.username" :figure="photoSelected.look" headonly />
+          </div>
+          <div>
+            <h5>
+              <NuxtLink :to="'/profil/' + photoSelected.username" class="photos__link">
+                {{ photoSelected.username }}
+              </NuxtLink>
+            </h5>
+            <span>Il y a {{ filters.timeAgo(photoSelected.time) }}</span>
+          </div>
+        </div>
+      </div>
     </BaseModal>
     <div v-if="loading" class="col-span-1 my-2 text-center">
       <h1><i class="mr-2 fa fa-spinner fa-spin" /> Chargement</h1>
@@ -67,9 +82,13 @@ onBeforeUnmount(() => {
 })
 
 const loadPhotos = async () => {
-  if (loading.value) { return }
+  if (loading.value) {
+    return
+  }
 
-  if (photosEnd.value) { return }
+  if (photosEnd.value) {
+    return
+  }
 
   try {
     loading.value = true
@@ -147,7 +166,7 @@ const loadPhotos = async () => {
         opacity: 0;
         width: 100%;
         height: auto;
-        bottom: 15px;
+        bottom: 0;
         background-color: rgba(0, 0, 0, 0.5);
         padding: 2px;
         color: #fff;

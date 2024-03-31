@@ -1,16 +1,15 @@
 <template>
   <div class="carousel">
-    <div class="carousel__bullets">
-      <div v-for="(data, index) in articles" :key="'bullets_' + index" class="carousel__bullets-link" :class="{ active: index == selectedId }" @click="selectArticle(index)" />
-    </div>
-
     <span class="carousel__arrow carousel__arrow-left" @click="back"><i class="fas fa-chevron-left" /></span>
     <span class="carousel__arrow carousel__arrow-right" @click="next"><i class="fas fa-chevron-right" /></span>
 
     <div v-for="(article, index) in articles" :key="'article_' + article.id" class="carousel__item" :class="{ active: index == selectedId }">
       <img :src="article.topstory_image" class="carousel__img-blur">
       <NuxtLink :to="'/community/news/' + article.id + '/' + article.link_keyword">
-        <div class="z-10 carousel__container">
+        <div class="z-10 carousel__container max-w-[759px]">
+          <div class="carousel__bullets">
+            <div v-for="(data, bulletIndex) in articles" :key="'bullets_' + bulletIndex" class="carousel__bullets-link" :class="{ active: bulletIndex == selectedId }" @click.prevent="selectArticle(bulletIndex)" />
+          </div>
           <img :src="article.topstory_image" class="carousel__img">
           <div class="carousel__content">
             <h1 class="carousel__title">
