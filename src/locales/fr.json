@@ -52,7 +52,7 @@
       "wait": "Veuillez attendre avant de re-créer un topic"
     },
     "settings-password": {
-      "mail-valid": "Activer votre email pour pouvoir changer de mot de passe",
+      "mail-valid": "Confirmer votre e-mail pour pouvoir changer de mot de passe",
       "empty-password": "Votre mot de passe est trop court",
       "same-password": "Les mots de passe ne corresponds pas"
     }
