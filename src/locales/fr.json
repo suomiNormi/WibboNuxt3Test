@@ -79,7 +79,6 @@
     "staff": "Équipe",
     "photo": "Photos",
     "forum": "Forum",
-    "rare": "Rares",
     "job": "Recrutement",
     "security": "SÉCURITÉ",
     "wibbo-security": "La sécurité sur Wibbo",
@@ -159,9 +158,6 @@
   },
   "photos": {
     "title": "Photos des joueurs"
-  },
-  "rares": {
-    "title": "Rares lootbox"
   },
   "forgot": {
     "title": "Mot de passe oublier"

@@ -71,11 +71,6 @@
                     {{ $t('navbar.forum') }}
                   </li>
                 </NuxtLink>
-                <NuxtLink :to="'/community/rares'">
-                  <li class="wibbo-nav__li">
-                    {{ $t('navbar.rare') }}
-                  </li>
-                </NuxtLink>
               </ul>
             </div>
           </transition>
