@@ -174,7 +174,7 @@
             <div :key="'dropName_' + dropName" class="wibbo-nav__content" :class="dropName == 'avatar' ? 'block' : 'hidden'">
               <ul class="wibbo-nav__ul">
                 <li v-if="authUser.rank > 5" class="wibbo-nav__li">
-                  <a :href="$nuxt.$config.public.adminUrl" target="_blank">{{ $t('navbar.admin') }}</a>
+                  <a :href="runtimeConfig.public.adminUrl" target="_blank">{{ $t('navbar.admin') }}</a>
                 </li>
                 <NuxtLink :to="'/settings'">
                   <li class="wibbo-nav__li">
@@ -202,6 +202,7 @@
 import TheNavbarSearch from './TheNavbarSearch.vue'
 import TheNavbarPromp from './TheNavbarPromp.vue'
 
+const runtimeConfig = useRuntimeConfig()
 const authUser = useAuthUser()
 const { logout } = useAuth()
 const route = useRoute()
@@ -300,12 +301,11 @@ const documentClick = (event: MouseEvent) => {
         border: none;
         padding: 0 10px;
         color: #ffffff;
+        transition: background-color 0.2s;
 
         &::placeholder {
             @apply placeholder-white placeholder-opacity-75;
         }
-
-        transition: background-color 0.2s;
 
         &:focus {
             background-color: rgba(0, 0, 0, 0.2);
@@ -349,7 +349,6 @@ const documentClick = (event: MouseEvent) => {
         border-radius: 8px;
         text-align: center;
         cursor: pointer;
-
         transition: background-color 0.2s;
 
         @screen lg {
@@ -401,6 +400,7 @@ const documentClick = (event: MouseEvent) => {
         overflow-x: hidden;
         margin-right: 1rem;
         max-width: 100%;
+        transition: max-width 0.6s, opacity 1s;
 
         @screen lg {
             margin: 0;
@@ -413,8 +413,6 @@ const documentClick = (event: MouseEvent) => {
             max-width: 100%;
             opacity: 1;
         }
-
-        transition: max-width 0.6s, opacity 1s;
     }
 
     &__content {

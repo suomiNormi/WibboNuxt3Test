@@ -7,7 +7,7 @@
     </div>
     <div v-for="data in photos" :key="data.photo" class="flex items-center justify-center col-span-1">
       <div class="photos" @click="photoSelected = data">
-        <img :src="$nuxt.$config.public.cdnUrl + '/photos/' + data.photo + '.png'" class="photos__background" onerror="style.display='none'">
+        <img :src="runtimeConfig.public.cdnUrl + '/photos/' + data.photo + '.png'" class="photos__background" onerror="style.display='none'">
         <div class="flex items-center photos__about">
           <div>
             <BaseAvatar :alt="'Photo de ' + data.username" :figure="data.look" headonly />
@@ -25,7 +25,7 @@
     </div>
     <BaseModal :show="photoSelected !== null" @close="photoSelected = null">
       <div v-if="photoSelected" class="flex flex-col items-center">
-        <img :src="$nuxt.$config.public.cdnUrl + '/photos/' + photoSelected.photo + '.png'" class="photos__background" onerror="style.display='none'">
+        <img :src="runtimeConfig.public.cdnUrl + '/photos/' + photoSelected.photo + '.png'" class="photos__background" onerror="style.display='none'">
         <div class="flex items-center w-full text-white bg-black bg-opacity-60">
           <div>
             <BaseAvatar :alt="'Photo de ' + photoSelected.username" :figure="photoSelected.look" headonly />
@@ -54,6 +54,8 @@ import * as filters from '~/utils/filters'
 definePageMeta({
   title: 'photos'
 })
+
+const runtimeConfig = useRuntimeConfig()
 
 const photoSelected = ref<Photo | null>(null)
 const photos = ref<Photo[]>([])

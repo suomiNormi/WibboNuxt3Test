@@ -56,9 +56,7 @@
               </h1>
               <div class="text-sm">
                 {{ $t('home.forum-last-message-1') }}
-                <NuxtLink :to="'/profil/' + post.lastpost_author">
-                  {{ post.lastpost_author }}
-                </NuxtLink>
+                <b>{{ post.lastpost_author }}</b>
                 {{ $t('home.forum-last-message-2') }} {{ filters.timeAgo(post.lastpost_date) }}
               </div>
             </div>

@@ -9,17 +9,17 @@
         <form class="grid grid-cols-1 gap-3 md:grid-cols-2" @submit.prevent="passwordPost">
           <div class="col-span-full">
             <label class="form-label">Mot de passe actuel</label>
-            <BaseInput v-model="passwordForm.oldpassword" type="password" placeholder="Mot de passe actuel" />
+            <BaseInput v-model="passwordForm.oldpassword" type="password" autocomplete="current-password" placeholder="Mot de passe actuel" />
           </div>
 
           <div class="col-span-1">
             <label class="form-label">Nouveau mot de passe</label>
-            <BaseInput v-model="passwordForm.newpassword" type="password" placeholder="Nouveau mot de passe" />
+            <BaseInput v-model="passwordForm.newpassword" type="password" autocomplete="new-password" placeholder="Nouveau mot de passe" />
           </div>
 
           <div class="col-span-1">
             <label class="form-label">Repéter le mot de passe</label>
-            <BaseInput v-model="passwordForm.repassword" type="password" placeholder="Repéter le mot de passe" />
+            <BaseInput v-model="passwordForm.repassword" type="password" autocomplete="new-password" placeholder="Repéter le mot de passe" />
           </div>
 
           <div class="col-span-full">

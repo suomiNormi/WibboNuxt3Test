@@ -144,7 +144,7 @@
           <div class="badge-container">
             <div v-for="group in groupe" :key="group.id" class="badge-socle">
               <NuxtLink :to="'/groupe/' + group.id">
-                <img :src="$nuxt.$config.public.cdnUrl + '/habbo-imaging/badge/' + group.badge + '.gif'" class="badge-img">
+                <img :src="runtimeConfig.public.cdnUrl + '/habbo-imaging/badge/' + group.badge + '.gif'" class="badge-img">
               </NuxtLink>
             </div>
           </div>
@@ -159,6 +159,7 @@ import type { User, UserStats, Group, Badge, Relation } from '~/types'
 import * as filters from '~/utils/filters'
 
 const route = useRoute()
+const runtimeConfig = useRuntimeConfig()
 
 const user = ref<Partial<User>>({ id: 0, username: '', look: '', motto: '', online: 0, vip_points: 0, account_created: 0, last_offline: 0 })
 const stats = ref<UserStats>({ respect: 0, achievement_score: 0, online_time: 0 })

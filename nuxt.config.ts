@@ -1,7 +1,9 @@
+import { defineNuxtConfig } from 'nuxt/config'
+
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   srcDir: 'src/',
-  
+
   runtimeConfig: {
       public: {
           siteUrl: process.env.NUXT_PUBLIC_SITE_URL,
@@ -32,13 +34,13 @@ export default defineNuxtConfig({
   i18n: {
       baseUrl: process.env.NUXT_PUBLIC_SITE_URL,
       locales: [
-          { code: 'fr', iso: 'fr-FR', file: 'fr.json', name: 'Français' }, // Français - France, Canada, Belgique, Suisse
+          { code: 'fr', file: 'fr.json', name: 'Français' }, // Français - France, Canada, Belgique, Suisse
       ],
       lazy: true,
       langDir: 'locales/',
       defaultLocale: 'fr',
       detectBrowserLanguage: false,
-      vueI18n: './i18n.config.ts' // if you are using custom path, default 
+      vueI18n: './i18n.config.ts' // if you are using custom path, default
   },
 
   nitro: {
@@ -52,12 +54,13 @@ export default defineNuxtConfig({
   },
 
   sitemap: {
-      sources: ['/api/sitemap'],
       sitemaps: {
           forum: {
+            sources: ['/api/sitemap'],
             include: ['/forum/sujet/**'],
           },
           article: {
+            sources: ['/api/sitemap'],
               include: ['/community/news/**'],
               exclude: ['/community/news-list']
           },
@@ -70,7 +73,6 @@ export default defineNuxtConfig({
   },
 
   pwa: {
-      /* PWA options */
       registerType: 'autoUpdate',
       manifest: {
           name: 'Wibbo',
@@ -134,8 +136,6 @@ export default defineNuxtConfig({
       },
       client: {
           installPrompt: true,
-          // you don't need to include this: only for testing purposes
-          // if enabling periodic sync for update use 1 hour or so (periodicSyncForUpdates: 3600)
           periodicSyncForUpdates: 3600,
       },
       devOptions: {
@@ -146,20 +146,8 @@ export default defineNuxtConfig({
         },
   },
 
-  // security: {
-  //     headers: {
-  //         crossOriginEmbedderPolicy: false,
-  //         contentSecurityPolicy: {
-  //             "img-src": ["'self'", 'data:', '*.wibbo.org']
-  //         }
-  //     }
-  // },
-
-  eslint: {
-    /* module options */
-  },
-
   css: ['@/assets/scss/main.scss', '@/assets/css/tailwind.css'],
 
-  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/i18n', '@nuxtjs/sitemap', '@vite-pwa/nuxt', '@nuxtjs/robots', '@nuxtjs/eslint-module'], //, 'nuxt-security'
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/i18n', '@nuxtjs/sitemap', '@vite-pwa/nuxt', '@nuxtjs/robots'],
+  compatibilityDate: '2024-09-13',
 })

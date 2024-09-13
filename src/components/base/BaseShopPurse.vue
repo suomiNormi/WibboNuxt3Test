@@ -5,14 +5,14 @@
     </template>
 
     <template #body>
-      <NuxtLink :to="'/shop/wibbo-points'" class="block mb-1 purse purse--wp">
+      <div class="block mb-1 purse purse--wp">
         <div class="purse__img purse__img--wp" />
         <span class="purse__value">{{ filters.formatNumber(props.vipPoints) }} WibboPoints</span>
-      </NuxtLink>
-      <NuxtLink :to="'/shop/limit-coins'" class="block mb-1 purse purse--ltc">
+      </div>
+      <div class="block mb-1 purse purse--ltc">
         <div class="purse__img purse__img--ltc" />
         <span class="purse__value">{{ filters.formatNumber(props.limitCoins) }} LimitCoins</span>
-      </NuxtLink>
+      </div>
     </template>
   </BaseCard>
 </template>
