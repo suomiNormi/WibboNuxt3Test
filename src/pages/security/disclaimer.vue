@@ -28,9 +28,7 @@
           <h4><b>1. Charges et responsabilités de Wibbo</b></h4>
           <br>
           <b>1.1</b>
-          Wibbo Hôtel utilise les ressources de Sulake Corporation LTD et offre à ses joueurs une alternative majoritairement gratuite à Habbo Hôtel, développé par cette même société. Le but
-          de la mise en ligne de cet hôtel parallèle est de pouvoir offrir une expérience de jeu enrichie par une gestion différente et une monnaie virtuelle obtenue gratuitement, à l'instar
-          d'Habbo Hôtel. Wibbo Hôtel n'a pas de but lucratif et n'hésite pas à dépenser la majeure partie des bénéfices faits à l'amélioration de la qualité de jeu.
+          Wibbo Hôtel utilise offre à ses joueurs une alternative majoritairement gratuite. L'objectif de cet hôtel parallèle est de fournir une expérience de jeu enrichie grâce à une gestion différente et une monnaie virtuelle obtenue gratuitement. Wibbo Hôtel n'a pas de but lucratif et consacre la majeure partie de ses bénéfices à l'amélioration de la qualité de jeu.
           <br><br>
           <b>1.2</b>
           Wibbo Hôtel dispose d'une boutique permettant à ses utilisateurs de profiter d'avantages en jeu, mais s'en dispenser n'alterne en aucun cas la qualité de jeu. Tous les achats
